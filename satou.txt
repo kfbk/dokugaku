@@ -1,0 +1,8 @@
+独学プログラマ
+https://blog.cloud-acct.com/posts/blog-nuxtjs-new-project
+
+	yarn create nuxt-app nuxt-dokugaku
+	cd nuxt-dokugaku
+	yarn dev
+
+Bitbucketのセットアップ
