@@ -59,7 +59,7 @@
       </ul>
     </template>
     <template v-else>
-      投稿された記事はありません。
+      投稿された記事はありませんne。
     </template>
   </v-container>
 </template>
