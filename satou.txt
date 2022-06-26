@@ -5,4 +5,41 @@ https://blog.cloud-acct.com/posts/blog-nuxtjs-new-project
 	cd nuxt-dokugaku
 	yarn dev
 
-Bitbucketのセットアップ
+フレームワークは、なしではなく、Vuetifyを使う
+ワーニングがでた（v-content --> v-main）
+Bitbucketではなく、GitHubをつかう
+
+GitHubにて新規リポジトリ作成
+	名前：dokugaku
+
+terminalにて、
+	git init			「.git」フォルダーが作られる。ステージングエリアやローカルリポジトリが作成
+	git add .			ワークツリーからステージングエリアへとファイルを上げます
+	git commit -m "first commit"	 -m "message" とすることでエディタを起動せずにメッセージを残す
+	git remote add origin https://github.com/kfbk/dokugaku.git	このURLは上で作成したリポジトリ名
+ 	git push -u origin master
+
+Netlify
+
+	AddNewSiteボタン	新規作成
+	AddSite			githubを指定
+	npm run build --> npm run generate
+	Settingにてサイト名の変更
+	https://dkgblog.netlify.app/ で作成できた
+
+Contentful
+	Space ID: 3j6vizzedtdw
+	Delivery API: IAwmuzP5f1FNMo05FPPFZz9AqiUL2g6IwBLo5xRWh4Y
+	Preview API: Ew23lX5qXUOjl2wxTOybnNZbusU1rw9r16DXhMeoeeQ
+
+2.Contentfulの使い方。初期設定と各メニューについて学ぶ
+https://blog.cloud-acct.com/posts/blog-contentful-signup
+
+3.Contentfulにブログ記事モデルを作成していこう
+https://blog.cloud-acct.com/posts/blog-contentful-modeling
+
+4.ContentfulからAPIを取得してNuxt.jsで記事一覧を表示する
+https://blog.cloud-acct.com/posts/blog-contentful-api
+
+5.Nuxt.jsにContentfulのブログ記事を表示する
+https://blog.cloud-acct.com/posts/blog-nuxt-slugpage
