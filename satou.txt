@@ -1,6 +1,18 @@
 独学プログラマ
 https://blog.cloud-acct.com/posts/blog-nuxtjs-new-project
 
+2.Contentfulの使い方。初期設定と各メニューについて学ぶ
+https://blog.cloud-acct.com/posts/blog-contentful-signup
+
+3.Contentfulにブログ記事モデルを作成していこう
+https://blog.cloud-acct.com/posts/blog-contentful-modeling
+
+4.ContentfulからAPIを取得してNuxt.jsで記事一覧を表示する
+https://blog.cloud-acct.com/posts/blog-contentful-api
+
+5.Nuxt.jsにContentfulのブログ記事を表示する
+https://blog.cloud-acct.com/posts/blog-nuxt-slugpage
+
 	yarn create nuxt-app nuxt-dokugaku
 	cd nuxt-dokugaku
 	yarn dev
@@ -32,14 +44,41 @@ Contentful
 	Delivery API: IAwmuzP5f1FNMo05FPPFZz9AqiUL2g6IwBLo5xRWh4Y
 	Preview API: Ew23lX5qXUOjl2wxTOybnNZbusU1rw9r16DXhMeoeeQ
 
-2.Contentfulの使い方。初期設定と各メニューについて学ぶ
-https://blog.cloud-acct.com/posts/blog-contentful-signup
+ContentfulのSDKをインストールする
+	yarn add contentful
 
-3.Contentfulにブログ記事モデルを作成していこう
-https://blog.cloud-acct.com/posts/blog-contentful-modeling
+環境変数を扱うdotenvをインストールする
+	yarn add @nuxtjs/dotenv
 
-4.ContentfulからAPIを取得してNuxt.jsで記事一覧を表示する
-https://blog.cloud-acct.com/posts/blog-contentful-api
+dotenvのセットアップ
+.envファイルの環境変数をNuxtに登録する
+	nuxt.config.jsに追記します
 
-5.Nuxt.jsにContentfulのブログ記事を表示する
-https://blog.cloud-acct.com/posts/blog-nuxt-slugpage
+Contentfulプラグインファイルを作成する
+	pluginsディレクトリ内にcontentful.jsファイルを作成
+index.vueからContentful APIを取得する
+	index.vueを編集
+Vuetifyの魔力で見た目をかっこよくする
+	warningが出る
+SourceNextでPush
+	これは記事にはない
+Netlifyに環境変数をセットする
+
+5.------------------------------------
+ブログ記事の個別ページを用意する
+	「posts」ディレクトリを作成して、_slug.vueファイルを作成
+Contentfulからブログ記事を取得する
+	_slug.vueを編集
+ブログ記事のリンクにparamsを埋め込む
+	index.vueを編集
+デフォルトのアイキャッチを用意する
+	defaultEyeCatch.png
+共通メソッドをVuexに追加する
+	storeディレクトリにindex.jsファイルを作成
+	内容を記事通りにしたらERROR（[vuex] already installed. Vue.use(Vuex) should be called only once.）
+	一度内容を全部消して、起動。再度、同じ内容を入れたら、今度はエラーにならなかった。
+Getterメソッドを利用する
+	index.vueを編集
+6.------------------------------------
+
+
