@@ -12,7 +12,8 @@
       />
         <!-- :src="currentPost.fields.image.fields.file.url"
         :alt="currentPost.fields.image.fields.title" -->
-      {{ currentPost.fields.publishDate }}<br>
+      <!-- {{ currentPost.fields.publishDate }}<br> -->
+      {{ new Date(currentPost.fields.publishDate).toLocaleDateString() }}<br>
       {{ currentPost.fields.body }}
     </template>
 

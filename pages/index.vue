@@ -88,7 +88,8 @@
                 </v-card-title>
               </v-img>
               <v-card-text>
-                {{ post.fields.publishDate }}
+                <span>{{ new Date(post.fields.publishDate).toLocaleDateString() }}</span>
+                <!-- {{ post.fields.publishDate }} -->
               </v-card-text>
               <v-list-item
                 three-line
