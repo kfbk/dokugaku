@@ -1,10 +1,19 @@
 <template>
   <v-app>
+    <v-app-bar id="app-bar" absolute app>
+      <v-app-bar-title>一日遅れの日記</v-app-bar-title>
+    </v-app-bar>
     <v-main>
       <!-- <v-container> -->
         <nuxt />
       <!-- </v-container> -->
     </v-main>
+    <v-footer
+      absolute
+      app
+    >
+      <span>&copy; {{ new Date().getFullYear() }}</span>
+    </v-footer>
   </v-app>
 </template>
 <!-- <template>
