@@ -151,6 +151,9 @@ export default {
       order: '-fields.publishDate'
     }).then(res => (posts = res.items)).catch(console.error)
     return { posts }
+  },
+  mounted() {
+    console.log("satou ", process.env.NODE_ENV)
   }
 }
 </script>

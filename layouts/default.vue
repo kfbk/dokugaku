@@ -1,6 +1,13 @@
 <template>
   <v-app>
-    <v-app-bar id="app-bar" absolute app>
+    <!-- サイドメニュー -->
+    <!-- <v-navigation-drawer app clipped v-model="drawer" dark color="info">
+    </v-navigation-drawer> -->
+
+    <!-- ヘッダー -->
+    <v-app-bar app clippedLeft flat dark color="indigo darken-3">
+      <!-- 3本線メニュー -->
+      <!-- <v-app-bar-nav-icon @click.stop="drawer=!drawer"></v-app-bar-nav-icon> -->
       <v-app-bar-title>一日遅れの日記</v-app-bar-title>
     </v-app-bar>
     <v-main>
@@ -8,14 +15,20 @@
         <nuxt />
       <!-- </v-container> -->
     </v-main>
-    <v-footer
-      absolute
-      app
-    >
+    <v-footer app color="primary">
       <span>&copy; {{ new Date().getFullYear() }}</span>
     </v-footer>
   </v-app>
 </template>
+<script>
+  export default {
+    data() {
+      return {
+        drawer: true
+      }
+    }
+  }
+</script>
 <!-- <template>
   <v-app dark>
     <v-navigation-drawer

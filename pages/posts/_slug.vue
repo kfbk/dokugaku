@@ -1,7 +1,27 @@
 <template>
   <v-container fluid>
     <template v-if="currentPost">
-      {{ currentPost.fields.title }}
+      <v-row>
+        <v-col cols="4">
+          <h1>{{ currentPost.fields.title }}</h1>
+        </v-col>
+        <v-spacer />
+        <v-col cols="6">
+        <div align="right">
+          <v-btn
+            outlined
+            color="primary"
+            to="/"
+          >
+            <!-- <v-icon size="16">
+              fas fa-angle-double-left
+            </v-icon> -->
+            <span class="ml-1">ホームへ戻る</span>
+          </v-btn>
+        </div>
+        </v-col>
+      </v-row>
+
       <v-img
         :src="setEyeCatch(currentPost).url"
         :alt="setEyeCatch(currentPost).title"
@@ -21,7 +41,7 @@
       お探しの記事は見つかりませんでした。
     </template>
 
-    <div>
+    <!-- <div>
       <v-btn
         outlined
         color="primary"
@@ -32,7 +52,7 @@
         </v-icon>
         <span class="ml-1">ホームへ戻る</span>
       </v-btn>
-    </div>
+    </div> -->
   </v-container>
 </template>
 
