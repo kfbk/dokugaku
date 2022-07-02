@@ -154,6 +154,7 @@ export default {
   },
   mounted() {
     console.log("satou ", process.env.NODE_ENV)
+    console.log("satou ", this.posts.length)
   }
 }
 </script>
